@@ -1,5 +1,5 @@
 package nl.jchmb.generic.factory;
 
-public interface Factory {
-
+public interface Factory<T> {
+	public T produce();
 }
