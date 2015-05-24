@@ -7,6 +7,11 @@ import java.util.Random;
 
 import nl.jchmb.generic.array.ArrayIterator;
 
+/**
+ * HexagonStructure class. Used to store objects of the generic type T in a convenient manner
+ * in a hexagon map. For a given (x, y), the x corresponds to the column number and the y
+ * to the row number. The first column/row is 0.
+ */
 public class HexagonStructure<T> implements Iterable<T> {
 	private int size;
 	private T[] cells;
@@ -108,7 +113,7 @@ public class HexagonStructure<T> implements Iterable<T> {
 		return cells[offset];
 	}
 	
-	public T getRandom() {
+	public T random() {
 		return cells[new Random().nextInt(cells.length)];
 	}
 	
